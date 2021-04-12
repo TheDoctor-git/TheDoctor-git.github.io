@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pozivnica za rođendan</title>
+    <meta name="description" content="Pozivnica za rođendan!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <h1 class="header__heading">Fešta je u gradu!!!</h1>
+    </section>
+    <nav>
+        <ul class="navlist">
+            <li class="navlist__link"><button class="navlist__links" onclick="openTab(event,'Info')">Info</button></li>
+            <li class="navlist__link"><button class="navlist__links" onclick="openTab(event,'TimenDate')">Mjesto i vrijeme</button></li>
+            <li class="navlist__link"><button class="navlist__links" onclick="openTab(event,'Contact')">Kontakt</button></li>
+        </ul>
+    </nav>
+    <section id="Info" class="tabcontent">
+        <div class="information">
+            <h2 class="information__heading">Pozivam te na svoj rođendan <i class="fa fa-birthday-cake"></i></h2>
+            <p class="information__paragraph">
+                Rođendan mi je inače 26.04., ali te pozivam da skupa pijemo i veselimo se prvi vikend nakon toga datuma. Naravno vrijeme i mjesto možeš vidjeti pritiskom na link za mjesto i vrijeme. U slučaju nejasnoća javi mi se bilo kojim putem opisanim u linku na kontakt.
+            </p>
+        </div>
+    </section>
+    <section id="TimenDate" class="tabcontent">
+        <div class="information">
+            <h2 class="information__heading">Mjesto i vrijeme održavanja:</h2>
+            <p class="information__paragraph">
+                Odabrani datum je trenutno: <br> <i class="fa fa-calendar"></i> 01.05.2021. <br> S početkom u 20:00 na već dobro poznatoj adresi: <br> <i class="fa fa-home"></i> <a href="https://goo.gl/maps/X2qbPWBUuSzy8zURA">Kopčevečka 10, Dugo Selo.</a>
+            </p>
+        </div>
+    </section>
+    <section id="Contact" class="tabcontent">
+        <div class="information">
+            <h2 class="information__heading">Kontaktiraj me:</h2>
+            <p class="information__paragraph">
+                U slučaju nejasnoća možeš me kontaktirati na sljedeće načine:
+                <br> <i class="fa fa-mobile-phone"></i> <a href="tel:+385913650186">0913650186</a>
+                <br> <i class="fa fa-envelope"></i> <a href="mailto:antonio.pavlovic2@gmail.com">antonio.pavlovic2@gmail.com</a>
+            </p>
+        </div>
+    </section>
+<footer class="footer">
+    <p class="footer__copyright">
+        &copy; Antonio, 2021.
+    </p>
+</footer>
+<script>
+    function openTab(evt, content) {
+        var i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName("navlist__links");
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        }
+        document.getElementById(content).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
