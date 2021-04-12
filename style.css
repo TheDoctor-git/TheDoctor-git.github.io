@@ -46,7 +46,6 @@ a {
 }
 .navlist__links:hover {
   text-decoration: underline;
-  background-color: #52ab98;
   cursor: pointer;
 }
 .navlist button.active {
