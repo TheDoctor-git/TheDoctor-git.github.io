@@ -35,9 +35,6 @@ a {
   list-style: none;
   padding: 10px 20px;
 }
-.navlist__link:hover {
-  background-color: #52ab98;
-}
 .navlist__links {
   text-decoration: none;
   color: #000;
