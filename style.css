@@ -2,12 +2,15 @@
 body {
   margin: 0;
   font-family: "IM Fell Double Pica", serif;
-  background-image: url("https://www.powerwolf.net/wp-content/uploads/2021/03/general_bg-2021-1.jpg");
+  background-image: url("http://yebanishedprivateers.com/assets/img/bandimg3.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
 }
 
 a {
   text-decoration: none;
-  color: #e5c9a9 !important;
+  color: #dfb127 !important;
 }
 
 .header {
@@ -45,11 +48,11 @@ a {
 }
 .navlist__links:hover {
   cursor: pointer;
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: #a5875c;
   border-radius: 10px;
 }
 .navlist button.active {
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: #a5875c;
   border-radius: 10px;
 }
 
@@ -75,19 +78,15 @@ a {
   margin-top: 0.5%;
   margin-bottom: 1%;
 }
-.information iframe {
-  margin: auto;
-  padding-bottom: 10%;
-}
 .information .timer {
   font-weight: bold;
 }
 
 .footer {
-  display: block;
   position: fixed;
   width: 100%;
   bottom: 0;
+  margin: 0;
   background-size: initial;
   background-repeat: repeat;
   background-image: url(https://www.powerwolf.net/wp-content/uploads/2021/03/sub_container_bg-and-footer_bg-2021_1.jpg), linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, #0c0c0c 100%) !important;
@@ -95,6 +94,15 @@ a {
 .footer__copyright {
   color: #fff;
   text-align: center;
+}
+
+.alert {
+  display: none;
+  text-align: left;
+  padding: 10px;
+  margin: 10px 0;
+  color: #fff;
+  background: #a5875c;
 }
 
 /*# sourceMappingURL=style.css.map */
