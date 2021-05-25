@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pattaya&display=swap');
 
 body {
     margin: 0;
-    font-family: 'IM Fell Double Pica', serif;
-    background-image: url("http://yebanishedprivateers.com/assets/img/bandimg3.jpg");
+    font-family: 'Indie Flower', cursive;
+    background-image: url("https://i.pinimg.com/originals/85/76/3b/85763bce6e23c631e643e9c154cd2453.jpg");
     background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: top;
+    background-size: cover;
+    background-position: center;
 }
 
 a {
@@ -21,6 +22,7 @@ a {
     height: 10%;
     font-size: 2.5em;
     background-color: rgba(0, 0, 0, 0.8);
+    font-family: 'Pattaya', sans-serif;
     color: #fff;
 
     &__heading {
@@ -111,4 +113,15 @@ a {
     margin: 10px 0;
     color: #fff;
     background: #a5875c;
+}
+
+form {
+    width: 50%;
+}
+
+input[type=text], input[type=submit] {
+    border-radius: 4px;
+}
+input[type=submit]:hover {
+    cursor: pointer;
 }

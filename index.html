@@ -8,13 +8,11 @@
     <meta name="description" content="Antonio te poziva na rođendan!">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="http://yebanishedprivateers.com/assets/img/logo.jpg">
+    <link rel="icon" href="https://www.gstatic.com/devrel-devsite/prod/v1674d466be3b1154327dd11cf186e748303b1e92ae31ff35df0f5192fbd777ea/firebase/images/favicon.png">
 </head>
 <body>
     <section class="header">
-        <h1 class="header__heading">Pripremite se...</h1>
-        <h4 style="text-align: center;">Novosti:</h4>
-        <p style="font-size: 0.5em; text-align: center;">Ispuni obrazac klikom na tab "Obrazac"!</p>
+        <h1 class="header__heading">Pozivamo te na svoj rođendan</h1>
     </section>
     <nav>
         <ul class="navlist">
@@ -26,9 +24,9 @@
     </nav>
     <section id="Info" class="tabcontent">
         <div class="information">
-            <h2 class="information__heading">Ovim putem pozivam te na rođendan! <i class="fa fa-birthday-cake"></i></h2>
+            <h2 class="information__heading">Ovim putem te pozivamo na rođendan <i class="fa fa-birthday-cake"></i></h2>
             <p class="information__paragraph">
-                Nisam mogao smisliti kreativni način da te pozovem, stoga sam kreirao ovu "Web" pozivnicu. Uglavnom pozivam te na rođendan koji će se održati na datum prikazan u dijelu "Mjesto i vrijeme".
+                Fićo i ja te pozivamo da dana 12.06. u 21h proslaviš s nama najluđu noć u životu. Dobro je poznato da se 18 rođendani ne propuštaju stoga očekujem tvoj dolazak. Kako bi znali što bolje isplanirati taj događaj, molimo te da ispuniš jednostavan obrazac pod odjeljkom 'Obrazac'. Mjesto i vrijeme možeš vidjeti i na odjeljku 'Mjesto i vrijeme'.
                 <br> Ukoliko imaš bilo kakvih pitanja javi mi se bilo kojim putem navedenim u dijelu "Kontakt".
                 <br> Veselim se tvome dolasku!
             </p>
@@ -38,7 +36,7 @@
         <div class="information">
             <h2 class="information__heading">Mjesto i vrijeme održavanja:</h2>
             <p class="information__paragraph">
-                Odabrani datum je trenutno: <br><br> <i class="fa fa-calendar"></i><b> 01.05.2021.</b> <br><br> S početkom u <b>20:00</b> na već dobro poznatoj adresi: <br><br> <i class="fa fa-home"></i> <a href="https://goo.gl/maps/X2qbPWBUuSzy8zURA"><b>Kopčevečka 10, Dugo Selo.</b></a>
+                Odabrani datum je: <br><br> <i class="fa fa-calendar"></i><b> 12.06.2021.</b> <br><br> S početkom u <b>21:00</b> na veoma popularnoj adresi: <br><br> <i class="fa fa-home"></i> <a href="https://goo.gl/maps/ZhxCMU7eEcPKMsmt6"><b>Šaškovečka ul. 182, 10370, Dugo Selo.</b></a>
                 <p>Odbrojavanje:</p>
                 <p id="timer" class="timer"></p>
             </p>
@@ -48,9 +46,9 @@
         <div class="information">
             <h2 class="information__heading">Kontaktiraj me:</h2>
             <p class="information__paragraph">
-                U slučaju nejasnoća možeš me kontaktirati na sljedeće načine:
-                <br><br> <i class="fa fa-mobile-phone"></i> <a href="tel:+385913650186"> 0913650186</a>
-                <br><br> <i class="fa fa-envelope"></i> <a href="mailto:antonio.pavlovic2@gmail.com"> antonio.pavlovic2@gmail.com</a>
+                U slučaju nejasnoća možeš nas kontaktirati na sljedeće načine:
+                <br><br> <i class="fa fa-mobile-phone"></i> <a href=""> Uskoro</a>
+                <br><br> <i class="fa fa-envelope"></i> <a href=""> Uskoro</a>
             </p>
         </div>
     </section>
@@ -96,7 +94,7 @@
         evt.currentTarget.className += " active";
     }
 
-    var countDownDate = new Date ("May 1, 2021 20:00:00").getTime();
+    var countDownDate = new Date ("June 12, 2021 21:00:00").getTime();
     var x = setInterval(function() {
         var now = new Date().getTime();
         var distance = countDownDate - now;
@@ -104,7 +102,7 @@
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("timer").innerHTML = days + "d:" + hours + "h:" + minutes + "m:" + seconds + "s";
+        document.getElementById("timer").innerHTML = days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("timer").innerHTML = "Počelo je !!!"
