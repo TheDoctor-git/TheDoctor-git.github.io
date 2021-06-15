@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pattaya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap");
 body {
   margin: 0;
-  font-family: 'Indie Flower', cursive;
-  background-image: url("https://i.pinimg.com/originals/85/76/3b/85763bce6e23c631e643e9c154cd2453.jpg");
+  font-family: "IM Fell Double Pica", serif;
+  background-image: url("http://yebanishedprivateers.com/assets/img/bandimg3.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-position-x: center;
+  background-position-y: top;
 }
 
 a {
@@ -21,10 +20,8 @@ a {
   height: 10%;
   font-size: 2.5em;
   background-color: rgba(0, 0, 0, 0.8);
-  font-family: 'Pattaya', sans-serif;
   color: #fff;
 }
-
 .header__heading {
   margin: 0;
   text-align: center;
@@ -35,14 +32,12 @@ a {
   padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 .navlist__link {
   display: inline;
   width: 100%;
   text-align: center;
   list-style: none;
 }
-
 .navlist__links {
   text-decoration: none;
   color: #e5c9a9 !important;
@@ -51,13 +46,11 @@ a {
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
-
 .navlist__links:hover {
   cursor: pointer;
   background-color: #a5875c;
   border-radius: 10px;
 }
-
 .navlist button.active {
   background-color: #a5875c;
   border-radius: 10px;
@@ -73,11 +66,9 @@ a {
 .information {
   width: 100%;
 }
-
 .information__heading {
   font-size: 1em;
 }
-
 .information__heading::after {
   position: relative;
   display: block;
@@ -87,7 +78,6 @@ a {
   margin-top: 0.5%;
   margin-bottom: 1%;
 }
-
 .information .timer {
   font-weight: bold;
 }
@@ -99,10 +89,8 @@ a {
   margin: 0;
   background-size: initial;
   background-repeat: repeat;
-  background-image: url(https://www.powerwolf.net/wp-content/uploads/2021/03/sub_container_bg-and-footer_bg-2021_1.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.41)), to(#0c0c0c)) !important;
   background-image: url(https://www.powerwolf.net/wp-content/uploads/2021/03/sub_container_bg-and-footer_bg-2021_1.jpg), linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, #0c0c0c 100%) !important;
 }
-
 .footer__copyright {
   color: #fff;
   text-align: center;
@@ -117,15 +105,4 @@ a {
   background: #a5875c;
 }
 
-form {
-  width: 50%;
-}
-
-input[type=text], input[type=submit] {
-  border-radius: 4px;
-}
-
-input[type=submit]:hover {
-  cursor: pointer;
-}
 /*# sourceMappingURL=style.css.map */
