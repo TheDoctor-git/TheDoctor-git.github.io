@@ -1,19 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pattaya&display=swap");
-html {
-  background-image: url("https://i.pinimg.com/originals/85/76/3b/85763bce6e23c631e643e9c154cd2453.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
 body {
   margin: 0;
   font-family: 'Indie Flower', cursive;
+  background-image: url("https://i.pinimg.com/originals/85/76/3b/85763bce6e23c631e643e9c154cd2453.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 a {
   text-decoration: none;
-  color: #dd355b !important;
+  color: #dfb127 !important;
 }
 
 .header {
@@ -47,7 +45,7 @@ a {
 
 .navlist__links {
   text-decoration: none;
-  color: #dd355b !important;
+  color: #e5c9a9 !important;
   border: none;
   background: none;
   transition: all 0.4s ease-in-out;
@@ -56,12 +54,12 @@ a {
 
 .navlist__links:hover {
   cursor: pointer;
-  background-color: #312b78;
+  background-color: #a5875c;
   border-radius: 10px;
 }
 
 .navlist button.active {
-  background-color: #312b78;
+  background-color: #a5875c;
   border-radius: 10px;
 }
 
@@ -116,7 +114,7 @@ a {
   padding: 10px;
   margin: 10px 0;
   color: #fff;
-  background: #f9583c;
+  background: #a5875c;
 }
 
 form {
@@ -127,12 +125,7 @@ input[type=text], input[type=submit] {
   border-radius: 4px;
 }
 
-input[type=submit] {
-  background-color: #dd355b;
-}
-
 input[type=submit]:hover {
   cursor: pointer;
-  background-color: #312b78;
 }
 /*# sourceMappingURL=style.css.map */
