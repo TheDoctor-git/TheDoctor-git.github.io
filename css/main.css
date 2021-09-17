@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,400;0,700;1,600&display=swap");
+body {
+  font-family: "Glory", sans-serif;
+}
+
+.bg {
+  background: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wine__header .offcanvas {
+  background: #1F1A17;
+}
+.wine__header .offcanvas-header {
+  color: #FFF;
+}
+.wine__header .nav-link:hover {
+  color: #c11b11;
+}
+.wine__about {
+  padding: 25px 0;
+}
+.wine__about > h1 {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.wine__about > a {
+  color: #c11b11;
+  text-decoration: none;
+}
+.wine__brand {
+  margin: 55px 0;
+  color: #FFF;
+}
+.wine__darkside figure > img {
+  background: #c11b11;
+  background: radial-gradient(circle, #c11b11 0%, #570703 35%, black 60%);
+}
+.wine__heading {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.wine__zero figure > img {
+  background: #c6be85;
+  background: radial-gradient(circle, #c6be85 0%, #222512 50%, black 70%);
+}
+
+.blockquote {
+  color: #FFF;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=main.css.map */

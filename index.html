@@ -1,116 +1,91 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday invitation | Pozivnica za rođendan</title>
-    <meta name="description" content="Antonio te poziva na rođendan!">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="http://yebanishedprivateers.com/assets/img/logo.jpg">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Griffin Ivančić</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
-    <section class="header">
-        <h1 class="header__heading">Pripremite se...</h1>
-        <h4 style="text-align: center;">Novosti:</h4>
-        <p style="font-size: 0.5em; text-align: center;">Ispuni obrazac klikom na tab "Obrazac"!</p>
-    </section>
-    <nav>
-        <ul class="navlist">
-            <li class="navlist__link"><button class="navlist__links" onclick="openTab(event,'Info')">Info</button></li>
-            <li class="navlist__link"><button class="navlist__links" onclick="openTab(event,'TimenDate')">Mjesto i vrijeme</button></li>
-            <li class="navlist__link"><button class="navlist__links" onclick="openTab(event,'Contact')">Kontakt</button></li>
-            <li class="navlist__link"><button class="navlist__links" onclick="openTab(event,'Form')">Obrazac</button></li>
-        </ul>
-    </nav>
-    <section id="Info" class="tabcontent">
-        <div class="information">
-            <h2 class="information__heading">Ovim putem pozivam te na rođendan! <i class="fa fa-birthday-cake"></i></h2>
-            <p class="information__paragraph">
-                Nisam mogao smisliti kreativni način da te pozovem, stoga sam kreirao ovu "Web" pozivnicu. Uglavnom pozivam te na rođendan koji će se održati na datum prikazan u dijelu "Mjesto i vrijeme".
-                <br> Ukoliko imaš bilo kakvih pitanja javi mi se bilo kojim putem navedenim u dijelu "Kontakt".
-                <br> Veselim se tvome dolasku!
-            </p>
-        </div>
-    </section>
-    <section id="TimenDate" class="tabcontent">
-        <div class="information">
-            <h2 class="information__heading">Mjesto i vrijeme održavanja:</h2>
-            <p class="information__paragraph">
-                Odabrani datum je trenutno: <br><br> <i class="fa fa-calendar"></i><b> 01.05.2021.</b> <br><br> S početkom u <b>20:00</b> na već dobro poznatoj adresi: <br><br> <i class="fa fa-home"></i> <a href="https://goo.gl/maps/X2qbPWBUuSzy8zURA"><b>Kopčevečka 10, Dugo Selo.</b></a>
-                <p>Odbrojavanje:</p>
-                <p id="timer" class="timer"></p>
-            </p>
-        </div>
-    </section>
-    <section id="Contact" class="tabcontent">
-        <div class="information">
-            <h2 class="information__heading">Kontaktiraj me:</h2>
-            <p class="information__paragraph">
-                U slučaju nejasnoća možeš me kontaktirati na sljedeće načine:
-                <br><br> <i class="fa fa-mobile-phone"></i> <a href="tel:+385913650186"> 0913650186</a>
-                <br><br> <i class="fa fa-envelope"></i> <a href="mailto:antonio.pavlovic2@gmail.com"> antonio.pavlovic2@gmail.com</a>
-            </p>
-        </div>
-    </section>
-    <section id="Form" class="tabcontent">
-        <div class="information">
-            <h2 class="information__heading">Molim te ispuni ovaj obrazac:</h2>
-            <p class="information__paragraph">
-                <form method="POST" id="decisionForm">
-                    <h3>Obrazac za potvrdu dolaska:</h3>
-                    <label for="ime">Ovim putem ja </label>
-                    <input type="text" name="ime" id="ime" placeholder="Ime i prezime" required>
-                    <label for="odluka">, potvrđujem da: </label>
-                    <input type="text" name="odluka" id="odluka" placeholder="Dolazim/nedolazim" required>.
-                    <br> <br>
-                    <input type="submit" id="submit" value="Pošalji!">
-                </form>
-                <div class="alert">Tvoja potvrda je zabilježena!</div>
-            </p>
-        </div>
-    </section>
-<footer class="footer">
-    <p class="footer__copyright">
-        &copy; Antonio, 2021.
-    </p>
-</footer>
-
-<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
-<script src="main.js"></script>
-
-<script>
-    function openTab(evt, content) {
-        var i, tabContent, tabLinks;
-        tabContent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabContent.length; i++) {
-            tabContent[i].style.display = "none";
-        }
-        tabLinks = document.getElementsByClassName("navlist__links");
-        for (i = 0; i < tabLinks.length; i++) {
-            tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-        }
-        document.getElementById(content).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    var countDownDate = new Date ("May 1, 2021 20:00:00").getTime();
-    var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("timer").innerHTML = days + "d:" + hours + "h:" + minutes + "m:" + seconds + "s";
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("timer").innerHTML = "Počelo je !!!"
-        }
-    }, 1000)
-</script>
-
+	<div class="bg">
+		<div class="container">
+			<header class="wine__header">
+				<nav class="navbar navbar-dark bg-dark fixed-top">
+				  <div class="container-fluid">
+				    <a class="navbar-brand" href="#">Griffin Ivančić</a>
+				    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+				      <span class="navbar-toggler-icon"></span>
+				    </button>
+				    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				      <div class="offcanvas-header">
+				        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Griffin Ivančić</h5>
+				        <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				      </div>
+				      <div class="offcanvas-body">
+				        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+				          <li class="nav-item">
+				            <a class="nav-link" aria-current="page" href="#darkside">Dark side</a>
+				          </li>
+				          <li class="nav-item">
+				            <a class="nav-link" href="#zero">Zero</a>
+				          </li>
+				        </ul>
+				      </div>
+				      <img src="img/logo_tip1.jpg" alt="logotip" class="img-fluid mx-auto d-block">
+				    </div>
+				  </div>
+				</nav>
+			</header>
+			<div class="wine__brand">
+				<div class="wine__about">
+					<h1>Vinarija Griffin Ivančić</h1>
+					<p>Nova zvijezda među vinima je rođena u središnjoj hrvatskoj i to u Plešivici. Krešimir Ivančić je mladi proizvođač vina koji se smatra pionirom korištenja nove tehnologije izrade vina i pjenušca s hladnom maceracijom. Metoda koja omogućuje proizvodnju vina i pjenušaca s jakim cvjetnim i voćnim buketom. Njegova obitelj generacijama se bavi proizvodnjom vina i imaju dugu tradiciju vinarstva. Njihovi se vinogradi nalaze na najvišim dijelovima Plešivice iznad 400 metara nadmorske visine, okrenuti prema jugu što im omogućuje proizvodnju vrhunskog grožđa. Činjenica da je Krešimir perfekcionist i čovjek koji živi za vino u kombinaciji s najnovijim tehnologijama daje karakterističan izraz terroira u vinima. Vinu daje karakter koji je vrlo prepoznatljiv i karakterističan za najbolja vina i vinare na svijetu.</p>
+					<a href="https://www.vecernji.hr/lifestyle/crni-sampanjac-na-cilju-brzinaca-wrc-a-od-portugisca-je-koji-su-pili-chaplin-i-jay-z-1486809">Pročitaj priču o vinariji</a>
+				</div>
+				<div class="wine__darkside" id="darkside">
+					<figure>
+						<img src="img/dark-side.png" alt="#" class="img-fluid float-start">
+					</figure>
+					<h2 class="wine__heading">Dark Side - pjenušavo vino</h2>
+					<p>Proizveden klasičnom metodom, odležavao dvije godine na kvascima. Prvi i jedini crni pjenušac u Hrvatskoj od sorte Purtugizec senzacionalno je piće koji budi maštu čim vidite bogatu gustu pjenu primamljive boje dok ga točite u čašu. Njegovi izraziti voćni mirisi očaravaju na nosu dok u okusu budi asocijacije slasti kao da jedete maline i višnje. U pozadini lagani i zreli tanini nadopunjuju okuse voća i zaokružuju okuse ovog vrhunskog pjenušavog vina.</p>
+					<h4>Temperatura serviranja: oko 14°</h4>
+				</div>
+				<div class="wine__zero" id="zero">
+					<figure>
+						<img src="img/zero.png" alt="#" class="img-fluid float-start">
+					</figure>
+					<h2 class="wine__heading">Zero - pjenušavo vino bez šećera</h2>
+					<p>Pjenušac proizveden klasičnom metodom. Bez likera i bez šećera, potpuno suh, ali vrlo kompleksan i kremozan. Baza je birano grožđe Chardonnaya s najboljeg položaja na Plešivici na 400 m nadmorske visine.U okusu prevladava karamela, maslac i vanilija dok u pozadini osjećamo svježinu nošenu citrusima.</p>
+					<h4>Temperatura serviranja: 6°-8°</h4>
+				</div>
+			</div>
+			<blockquote class="blockquote">
+				"A onda me jedan dan samo puknulo. Uvidio sam da je vino živo biće, koje ima toliko parametara u sebi koje možeš kontrolirati i dobiti točno ono što želiš pa i biti ponosan na njega na kraju. I to je bila prekretnica. Druga prekretnica dogodila se kad sam morao odlučiti hoću li se time baviti usput, ili se biznisu skroz posvetiti i pokušati živjeti od toga. Tu sam se kratko lomio, razmišljao i na kraju odlučio: krećem." - K. Ivančić
+			</blockquote>
+			<div class="gallery">
+				<div class="swiper mySwiper">
+    				<div class="swiper-wrapper">
+    				  <div class="swiper-slide"><img src="img/Ivancic-(10).jpg" alt=""></div>
+    				  <div class="swiper-slide"><img src="img/Ivancic-(63).jpg" alt=""></div>
+    				</div>
+    				<div class="swiper-pagination"></div>
+    			</div>
+			</div>
+			<img src="img/logo.jpg" class="img-fluid mx-auto d-block" alt="logotip">
+		</div>
+	</div>
 </body>
+<script>
+	var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+</script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </html>

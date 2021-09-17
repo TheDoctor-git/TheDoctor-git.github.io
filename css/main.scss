@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,400;0,700;1,600&display=swap');
+
+body {
+	font-family: 'Glory', sans-serif;
+}
+
+.bg {
+	background: #000;
+	// position: absolute;
+	// top: 0;
+	// right: 0;
+	// bottom: 0;
+	// left: 0;
+	// background:  url("../img/wallpaper.jpg") center top no-repeat;
+	// background-size:  cover;
+
+	// &:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	background: rgba(0, 0, 0, 0.8);
+	// }
+}
+
+.container {
+	// position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.wine {
+
+	&__header {
+
+		.offcanvas {
+			background: #1F1A17;
+
+			&-header {
+				color: #FFF;
+			}
+		}
+
+		.nav {
+
+			&-link {
+
+				&:hover {
+					color: rgb(193,27,17);
+				}
+			}
+		}
+	}
+
+	&__about {
+		padding: 25px 0;
+
+		> h1 {
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
+
+		> a {
+			color: rgb(193,27,17);
+			text-decoration: none;
+		}
+	}
+
+	&__brand {
+		margin: 55px 0;
+		color: #FFF;
+	}
+
+	&__darkside {
+
+
+		figure {
+
+			> img {
+				background: rgb(193,27,17);
+				background: radial-gradient(circle, rgba(193,27,17,1) 0%, rgba(87,7,3,1) 35%, rgba(0,0,0,1) 60%); 
+			}
+		}
+	}
+
+	&__heading {
+		text-align: center;
+		margin: 0 0 20px 0;
+	}
+
+	&__zero {
+
+		figure {
+			> img {
+				background: rgb(198,190,133);
+				background: radial-gradient(circle, rgba(198,190,133,1) 0%, rgba(34,37,18,1) 50%, rgba(0,0,0,1) 70%);
+			}
+		}
+	}
+}
+
+.blockquote {
+	color: #FFF;
+}
+
+.swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
